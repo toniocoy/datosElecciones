@@ -6,13 +6,13 @@ library(readr)
 
 
 # RUTAS -----
-setwd("~/GeneracionMuestraEuropeas")
+setwd("~/2024-06-09")
 ruta_proyecto <- getwd()
-ruta_europeas <- paste0(ruta_proyecto,"/Data/01_Datos_europeas_2024/007/")
+ruta_europeas <- paste0(ruta_proyecto,"/todo/")
 ruta_claves_provincias <- paste0(ruta_europeas, "Claves_Provincias.csv")
 
 rutas_archivos <- list.files(path= ruta_europeas, pattern="AU_202.CSV",full.names = T )
-ruta_guardado <- paste0(ruta_proyecto,"/Data/01_Datos_europeas_2024/Resultados_Europeas.csv")
+ruta_guardado <- paste0(ruta_proyecto,"/Resultados_Europeas.csv")
 
 ## eliminamos uno que sobra
 rutas_archivos <- rutas_archivos[!grepl("007TOT99AU_202.CSV", rutas_archivos)]
