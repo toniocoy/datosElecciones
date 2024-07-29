@@ -32,9 +32,7 @@ leer_y_combinar_csvs <- function(rutas_archivos) {
 arreglar_datos_europeas <- function(datos){
   # Inicializar columnas para los resultados de los partidos
   datos <- datos %>%
-    mutate(Votos_FO_N = NA, Votos_FO_perc = NA,
-           Votos_SALF_N = NA, Votos_SALF_perc = NA,
-           Votos_IE_N= NA, Votos_IE_perc = NA)
+    mutate(Votos_FO_N = NA, Votos_FO_perc = NA)
   
   # Iterar sobre las filas del DataFrame para encontrar las columnas de cada partido
   for (i in 1:nrow(datos)) {
